@@ -19,7 +19,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #020611;
+    background: #020711;
     color: white;
     line-height: 1.6;
 }
@@ -31,223 +31,215 @@ a {
 
 /* NAVBAR */
 
-.navbar {
+nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(1,5,15,0.95);
-    border-bottom: 1px solid #12345f;
+    height: 70px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: rgba(0,0,0,.95);
+    border-bottom: 1px solid #102b55;
 }
 
 .logo {
     font-size: 22px;
     font-weight: 800;
-    color: #38a9ff;
+    color: #168cff;
+    letter-spacing: 2px;
 }
 
 .logo span {
     display: block;
-    font-size: 10px;
-    letter-spacing: 4px;
     color: #ffffff;
+    font-size: 9px;
+    letter-spacing: 4px;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
-    list-style: none;
+    gap: 28px;
 }
 
 .nav-links a {
-    color: #b9c8e8;
-    font-size: 14px;
+    font-size: 13px;
+    color: #9db3d2;
 }
 
 .nav-links a:hover {
-    color: #36a9ff;
+    color: #27a9ff;
 }
 
 .nav-btn {
-    background: linear-gradient(90deg,#176cff,#19a7ff);
+    background: linear-gradient(90deg,#164cff,#087dff);
     padding: 11px 20px;
     border-radius: 25px;
+    font-size: 12px;
     font-weight: bold;
-    font-size: 13px;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 620px;
-    padding: 80px 6%;
+    min-height: 520px;
+    padding: 70px 5%;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 40px;
     background:
-    radial-gradient(circle at 75% 50%, rgba(0,126,255,.25), transparent 35%),
-    linear-gradient(135deg,#03112e,#020714 65%,#061d3d);
+        radial-gradient(circle at 70% 45%,#063e88 0%,transparent 32%),
+        linear-gradient(135deg,#031a42,#020711 70%);
 }
 
 .hero-small {
     color: #42caff;
-    font-size: 18px;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .hero h1 {
-    font-size: clamp(42px,6vw,72px);
+    font-size: 55px;
     line-height: 1.05;
-    margin: 12px 0 20px;
+    margin: 15px 0;
 }
 
 .hero h1 span {
-    color: #36baff;
+    color: #1ca9ff;
 }
 
 .hero p {
-    max-width: 650px;
-    color: #b8c8e2;
-    font-size: 17px;
+    color: #b8c8df;
+    max-width: 620px;
 }
 
 .buttons {
     display: flex;
     gap: 15px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    margin-top: 25px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 14px 25px;
-    border-radius: 30px;
+    padding: 13px 23px;
+    border-radius: 25px;
     font-weight: bold;
+    font-size: 13px;
 }
 
-.primary {
-    background: linear-gradient(90deg,#ffb000,#ff7a00);
-    color: #07101d;
+.btn-primary {
+    background: linear-gradient(90deg,#ffb000,#ff8a00);
+    color: #07101c;
 }
 
-.secondary {
-    border: 1px solid #16aaff;
-    color: white;
+.btn-secondary {
+    border: 1px solid #138fff;
+    color: #4fc5ff;
 }
 
-.ai-orb {
-    width: 330px;
-    height: 330px;
-    margin: auto;
+/* AI VISUAL */
+
+.ai-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 360px;
+}
+
+.ai-circle {
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background:
-    radial-gradient(circle,#17baff 0%,#0860d7 25%,#071b4c 60%,transparent 70%);
-    box-shadow: 0 0 80px rgba(0,150,255,.7);
-    position: relative;
+    justify-content: center;
+    background: radial-gradient(circle,#0b8fff,#07366d 55%,#020711);
+    border: 2px solid #20aaff;
+    box-shadow: 0 0 70px #006cff;
+    font-size: 50px;
+    font-weight: bold;
+    color: #5bd4ff;
 }
 
-.ai-orb::before {
-    content: "AI";
-    font-size: 60px;
-    font-weight: 900;
-    color: #62e5ff;
-    text-shadow: 0 0 25px #00cfff;
-}
-
-.ai-orb::after {
-    content: "AUTOMATION";
+.ai-label {
     position: absolute;
-    bottom: 30px;
-    color: #fff;
-    font-size: 12px;
-    letter-spacing: 5px;
+    background: #09254a;
+    border: 1px solid #168cff;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 13px;
 }
 
-/* STATS */
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    background: #06152d;
-    border-top: 1px solid #123b70;
-    border-bottom: 1px solid #123b70;
+.label1 {
+    transform: translate(150px,-130px);
 }
 
-.stat {
-    padding: 25px;
-    text-align: center;
+.label2 {
+    transform: translate(-170px,-80px);
 }
 
-.stat h3 {
-    color: #35c5ff;
-    font-size: 30px;
+.label3 {
+    transform: translate(160px,90px);
 }
 
-.stat p {
-    color: #aabbd5;
+.label4 {
+    transform: translate(-160px,120px);
 }
 
 /* SECTIONS */
 
 section {
-    padding: 80px 6%;
+    padding: 65px 5%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
 .section-title h2 {
-    font-size: 40px;
+    font-size: 34px;
 }
 
 .section-title p {
-    color: #8ea5c9;
-    margin-top: 10px;
+    color: #8098b8;
 }
 
-/* CARDS */
+/* SOLUTIONS */
 
 .cards {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 22px;
+    gap: 18px;
 }
 
 .card {
-    background: linear-gradient(145deg,#0b1b37,#061020);
-    border: 1px solid #174577;
-    padding: 30px;
-    border-radius: 18px;
-    transition: .3s;
+    background: linear-gradient(145deg,#10213b,#07111f);
+    border: 1px solid #183b67;
+    border-radius: 16px;
+    padding: 25px;
+    min-height: 190px;
 }
 
-.card:hover {
-    transform: translateY(-7px);
-    border-color: #27baff;
-    box-shadow: 0 15px 40px rgba(0,130,255,.15);
-}
-
-.icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+.card-icon {
+    font-size: 30px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
-    color: white;
+    margin: 12px 0;
 }
 
 .card p {
-    color: #9db0cf;
+    color: #9eb1ca;
+    font-size: 14px;
+}
+
+.learn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #20aaff;
+    font-size: 13px;
 }
 
 /* INDUSTRIES */
@@ -259,144 +251,200 @@ section {
 }
 
 .industry {
-    background: #08162d;
-    border: 1px solid #173c67;
-    padding: 20px 10px;
+    text-align: center;
+    padding: 18px 8px;
+    background: #071426;
+    border: 1px solid #19395f;
     border-radius: 12px;
-    text-align: center;
-    color: #c8d7ef;
 }
 
-.industry:hover {
-    background: #0d2c55;
-    border-color: #20baff;
+.industry-icon {
+    font-size: 25px;
 }
 
-/* ASF */
-
-.asf {
-    background:
-    radial-gradient(circle at 20% 30%,rgba(0,153,255,.2),transparent 35%),
-    #041023;
-}
-
-.asf-box {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 15px;
-}
-
-.asf-step {
-    text-align: center;
-    padding: 25px 12px;
-    background: #081a35;
-    border: 1px solid #1a5287;
-    border-radius: 15px;
-}
-
-.asf-step strong {
+.industry strong {
     display: block;
-    color: #34c6ff;
-    font-size: 18px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    font-size: 13px;
 }
 
-/* PROJECTS */
-
-.project {
-    min-height: 210px;
+.industry small {
+    color: #8199b7;
+    font-size: 10px;
 }
 
-.project span {
+.industry.realestate {
+    border-color: #168fff;
+    background: #082a55;
+}
+
+.industry.defense {
+    border-color: #ffad00;
+}
+
+/* FEATURED PROJECTS */
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.featured-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(145deg,#091d3b,#030a14);
+    border: 1px solid #17477c;
+}
+
+.project-label {
     display: inline-block;
-    background: #092b51;
-    color: #43caff;
-    padding: 5px 10px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #073b72;
+    color: #42caff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.project-label.orange {
+    background: #3a2805;
+    color: #ffb000;
+}
+
+.featured-card h2 {
+    margin: 15px 0 10px;
+}
+
+.featured-card p {
+    color: #9eb1ca;
+}
+
+.project-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.project-flow span {
+    background: #0a294d;
+    padding: 8px 12px;
     border-radius: 15px;
+    font-size: 11px;
+}
+
+.demo-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #020914;
+    border-radius: 15px;
+}
+
+.chat {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
     font-size: 12px;
-    margin-bottom: 15px;
 }
 
-/* CTA */
+.bot {
+    background: #102d50;
+}
 
-.cta {
-    text-align: center;
+.user {
+    background: #073b70;
+    text-align: right;
+}
+
+.green-btn {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 20px;
+    background: #08b982;
+    color: white;
+    font-weight: bold;
+}
+
+.defense-card {
     background:
-    linear-gradient(135deg,#06316b,#041329);
-    border-top: 1px solid #1761a0;
-    border-bottom: 1px solid #1761a0;
+        radial-gradient(circle at 80% 20%,#06447c,transparent 35%),
+        linear-gradient(145deg,#091d3b,#030a14);
 }
 
-.cta h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
+.defense-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
 }
 
-.cta p {
-    color: #b7c9e3;
-    max-width: 700px;
-    margin: auto;
+.defense-features div {
+    padding: 12px;
+    background: #0a2949;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.progress {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 20px;
+    background: #ffad00;
+    color: #111;
+    font-weight: bold;
+    font-size: 11px;
 }
 
 /* CONTACT */
 
 .contact {
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(145deg,#0b2345,#040b16);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid #16477d;
+}
+
+.form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 15px;
 }
 
-.contact-info h2 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.contact-info p {
-    color: #aabbd5;
-}
-
-form {
-    background: #07152b;
-    padding: 30px;
-    border: 1px solid #1b4774;
-    border-radius: 20px;
-}
-
-input,
-textarea,
-select {
+input, textarea, select {
     width: 100%;
     padding: 14px;
-    margin-bottom: 15px;
+    border: 1px solid #234d78;
     background: #020914;
-    border: 1px solid #244d77;
-    border-radius: 8px;
     color: white;
+    border-radius: 8px;
 }
 
 textarea {
-    height: 120px;
+    min-height: 120px;
+    margin-top: 15px;
 }
 
-button {
+.submit {
+    margin-top: 15px;
     width: 100%;
-    padding: 15px;
-    border: none;
+    padding: 14px;
+    border: 0;
     border-radius: 25px;
-    background: linear-gradient(90deg,#ffb000,#ff7a00);
+    background: linear-gradient(90deg,#ffb000,#ff8500);
     font-weight: bold;
-    cursor: pointer;
 }
 
 /* FOOTER */
 
 footer {
-    padding: 35px 6%;
-    background: #01050d;
-    border-top: 1px solid #12345f;
+    padding: 35px 5%;
     text-align: center;
+    background: #02050a;
+    border-top: 1px solid #102b55;
 }
 
 footer .logo {
@@ -404,8 +452,8 @@ footer .logo {
 }
 
 footer p {
-    color: #8194b3;
-    font-size: 13px;
+    color: #7890ad;
+    font-size: 12px;
 }
 
 /* MOBILE */
@@ -430,51 +478,23 @@ footer p {
     }
 
     .cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .industry-grid {
-        grid-template-columns: repeat(3,1fr);
-    }
-
-    .asf-box {
-        grid-template-columns: 1fr;
-    }
-
-    .contact {
-        grid-template-columns: 1fr;
-    }
-
-    .stats {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media(max-width:600px) {
-
-    section {
-        padding: 60px 5%;
-    }
-
-    .hero {
-        padding: 60px 5%;
-    }
-
-    .cards {
         grid-template-columns: 1fr;
     }
 
     .industry-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .ai-orb {
-        width: 250px;
-        height: 250px;
+    .featured-grid {
+        grid-template-columns: 1fr;
     }
 
-    .cta h2 {
-        font-size: 32px;
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
     }
 }
 </style>
@@ -484,56 +504,61 @@ footer p {
 
 <!-- NAVIGATION -->
 
-<nav class="navbar">
+<nav>
 
-<div class="logo">
-LEANOVA
-<span>OPEX SOLUTIONS</span>
+<a href="#" class="logo">
+    LEANOVA
+    <span>OPEX SOLUTIONS</span>
+</a>
+
+<div class="nav-links">
+    <a href="#solutions">Solutions</a>
+    <a href="#industries">Industries</a>
+    <a href="#projects">Our Work</a>
+    <a href="#defense">Defense</a>
+    <a href="#contact">Contact</a>
 </div>
 
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#solutions">Solutions</a></li>
-<li><a href="#industries">Industries</a></li>
-<li><a href="#work">Our Work</a></li>
-<li><a href="#asf">ASF</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<a class="nav-btn" href="#contact">Free Automation Audit</a>
+<a href="#contact" class="nav-btn">
+    Get Free Automation Audit
+</a>
 
 </nav>
 
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero">
 
 <div>
 
-<div class="hero-small">AI-POWERED AUTOMATION</div>
+<div class="hero-small">
+    AI-POWERED AUTOMATION
+</div>
 
 <h1>
-Automated Business
-<span>Solutions</span>
+    Automated<br>
+    <span>Business Solutions</span>
 </h1>
 
+<h3>
+    Smarter Operations. Higher Efficiency. Real Business Impact.
+</h3>
+
 <p>
-Smarter operations. Higher efficiency. Real business impact.
-Leanova OPEX Solutions builds AI-powered automation systems that
-help businesses reduce manual work, improve decision-making and
-achieve operational excellence.
+    Leanova OPEX Solutions builds AI-powered automation systems
+    that help businesses reduce manual work, improve decision-making
+    and achieve operational excellence.
 </p>
 
 <div class="buttons">
 
-<a class="btn primary" href="#contact">
-Book a Free Consultation →
+<a href="#contact" class="btn btn-primary">
+    Book a Free Consultation →
 </a>
 
-<a class="btn secondary" href="#work">
-▶ Watch Demo
+<a href="#projects" class="btn btn-secondary">
+    ▶ Watch Demo
 </a>
 
 </div>
@@ -541,36 +566,20 @@ Book a Free Consultation →
 </div>
 
 
-<div class="ai-orb"></div>
+<div class="ai-visual">
+
+<div class="ai-circle">
+    AI
+</div>
+
+<div class="ai-label label1">🏠 Real Estate</div>
+<div class="ai-label label2">🛡️ Defense</div>
+<div class="ai-label label3">🏭 Manufacturing</div>
+<div class="ai-label label4">❤️ Healthcare</div>
+
+</div>
 
 </section>
-
-
-<!-- STATS -->
-
-<div class="stats">
-
-<div class="stat">
-<h3>90%</h3>
-<p>Automation Potential</p>
-</div>
-
-<div class="stat">
-<h3>50%</h3>
-<p>Manual Work Reduction</p>
-</div>
-
-<div class="stat">
-<h3>3X</h3>
-<p>Faster Operations</p>
-</div>
-
-<div class="stat">
-<h3>24/7</h3>
-<p>Automated Operations</p>
-</div>
-
-</div>
 
 
 <!-- SOLUTIONS -->
@@ -578,64 +587,52 @@ Book a Free Consultation →
 <section id="solutions">
 
 <div class="section-title">
-
 <h2>Our AI Solutions</h2>
-
-<p>
-End-to-end automation for modern businesses
-</p>
-
+<p>End-to-end automation for modern businesses.</p>
 </div>
-
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">🎙️</div>
+<div class="card-icon">🎙️</div>
 <h3>AI Voice Agents</h3>
-<p>
-Call, qualify, follow-up and book meetings automatically.
-</p>
+<p>Call, qualify, follow-up and book meetings automatically.</p>
+<a class="learn" href="#contact">Learn More →</a>
 </div>
 
 <div class="card">
-<div class="icon">⚙️</div>
+<div class="card-icon">⚙️</div>
 <h3>Business Automation</h3>
-<p>
-Automate repetitive tasks, workflows and operational processes.
-</p>
+<p>Automate repetitive tasks, workflows and business processes.</p>
+<a class="learn" href="#contact">Learn More →</a>
 </div>
 
 <div class="card">
-<div class="icon">📄</div>
+<div class="card-icon">📄</div>
 <h3>Document Intelligence</h3>
-<p>
-OCR + AI + RAG for documents, contracts, invoices and reports.
-</p>
+<p>OCR + RAG for documents, contracts and reports.</p>
+<a class="learn" href="#contact">Learn More →</a>
 </div>
 
 <div class="card">
-<div class="icon">📊</div>
+<div class="card-icon">📊</div>
 <h3>AI Dashboards</h3>
-<p>
-Real-time business insights, analytics and ROI tracking.
-</p>
+<p>Real-time insights, analytics and ROI tracking dashboards.</p>
+<a class="learn" href="#contact">Learn More →</a>
 </div>
 
 <div class="card">
-<div class="icon">🤖</div>
-<h3>Custom AI Applications</h3>
-<p>
-Build tailored AI applications around your business requirements.
-</p>
+<div class="card-icon">🤖</div>
+<h3>Custom AI Apps</h3>
+<p>Build tailored AI applications for your business requirements.</p>
+<a class="learn" href="#contact">Learn More →</a>
 </div>
 
 <div class="card">
-<div class="icon">🔗</div>
+<div class="card-icon">🔗</div>
 <h3>ERP / CRM Integration</h3>
-<p>
-Connect SAP, Oracle, Dynamics, Zoho, Salesforce and other systems.
-</p>
+<p>SAP, Oracle, Dynamics, Zoho, Salesforce and business systems.</p>
+<a class="learn" href="#contact">Learn More →</a>
 </div>
 
 </div>
@@ -648,77 +645,46 @@ Connect SAP, Oracle, Dynamics, Zoho, Salesforce and other systems.
 <section id="industries">
 
 <div class="section-title">
-
 <h2>Industries We Serve</h2>
-
-<p>Automation designed for real business impact.</p>
-
+<p>AI solutions designed for real business impact.</p>
 </div>
 
 <div class="industry-grid">
 
-<div class="industry">🏠<br>Real Estate</div>
-<div class="industry">🏭<br>Manufacturing</div>
-<div class="industry">🎓<br>Education</div>
-<div class="industry">❤️<br>Healthcare</div>
-<div class="industry">💰<br>Finance</div>
-<div class="industry">🛡️<br>Defense</div>
-<div class="industry">🛒<br>Retail</div>
-<div class="industry">🚚<br>Logistics</div>
-<div class="industry">🏢<br>Government</div>
-<div class="industry">💻<br>Technology</div>
-<div class="industry">🏨<br>Hospitality</div>
-<div class="industry">📞<br>Customer Service</div>
-
+<div class="industry realestate">
+<div class="industry-icon">🏠</div>
+<strong>Real Estate</strong>
+<small>Voice Agent • Leads</small>
 </div>
 
-</section>
-
-
-<!-- ASF -->
-
-<section class="asf" id="asf">
-
-<div class="section-title">
-
-<h2>ASF — Automation Speed Framework</h2>
-
-<p>
-Our structured approach to faster and measurable automation.
-</p>
-
+<div class="industry">
+<div class="industry-icon">🏭</div>
+<strong>Manufacturing</strong>
+<small>OEE • Maintenance</small>
 </div>
 
-<div class="asf-box">
-
-<div class="asf-step">
-<strong>01</strong>
-DISCOVER
-<p>Identify manual processes.</p>
+<div class="industry">
+<div class="industry-icon">🎓</div>
+<strong>Education</strong>
+<small>Admissions</small>
 </div>
 
-<div class="asf-step">
-<strong>02</strong>
-DESIGN
-<p>Create the automation blueprint.</p>
+<div class="industry">
+<div class="industry-icon">❤️</div>
+<strong>Healthcare</strong>
+<small>Appointments</small>
 </div>
 
-<div class="asf-step">
-<strong>03</strong>
-DEPLOY
-<p>Implement AI and workflows.</p>
+<div class="industry">
+<div class="industry-icon">💰</div>
+<strong>Finance</strong>
+<small>Reports • Compliance</small>
 </div>
 
-<div class="asf-step">
-<strong>04</strong>
-MEASURE
-<p>Track business impact and ROI.</p>
-</div>
-
-<div class="asf-step">
-<strong>05</strong>
-OPTIMIZE
-<p>Continuously improve performance.</p>
+<div class="industry defense">
+<div class="industry-icon">🛡️</div>
+<strong>Defense</strong>
+<small>AI • Analytics</small>
 </div>
 
 </div>
@@ -728,161 +694,93 @@ OPTIMIZE
 
 <!-- PROJECTS -->
 
-<section id="work">
+<section id="projects">
 
 <div class="section-title">
-
-<h2>Our Work</h2>
-
-<p>AI automation concepts and business solutions.</p>
-
+<h2>Featured Automation Projects</h2>
+<p>Practical AI solutions built for high-impact operations.</p>
 </div>
 
-<div class="cards">
+<div class="featured-grid">
 
-<div class="card project">
 
-<span>REAL ESTATE</span>
+<!-- REAL ESTATE -->
 
-<h3>AI Lead Automation</h3>
+<div class="featured-card">
+
+<div class="project-label">
+REAL ESTATE
+</div>
+
+<h2>🏠 Real Estate AI Voice Agent</h2>
 
 <p>
-AI voice agent → lead qualification → WhatsApp follow-up
-→ site visit scheduling → CRM.
+Automate property enquiries, qualify leads,
+schedule site visits and follow up with prospects
+automatically.
 </p>
+
+<div class="project-flow">
+<span>📞 Voice Agent</span>
+<span>🎯 Lead Qualification</span>
+<span>📅 Site Visit</span>
+<span>💬 Follow-up</span>
+</div>
+
+<div class="demo-box">
+
+<div class="chat bot">
+🤖 Hello! I'm your Property Assistant.
+Are you looking for a 2BHK or 3BHK?
+</div>
+
+<div class="chat user">
+I'm looking for a 3BHK in Hyderabad.
+</div>
+
+<div class="chat bot">
+Great! I found matching properties.
+Shall I schedule a site visit?
+</div>
+
+<button class="green-btn">
+✓ Site Visit Booked
+</button>
+
+</div>
 
 </div>
 
 
-<div class="card project">
+<!-- DEFENSE -->
 
-<span>ANALYTICS</span>
+<div class="featured-card defense-card" id="defense">
 
-<h3>Sales & ROI Dashboard</h3>
+<div class="project-label orange">
+DEFENSE — IN PROGRESS
+</div>
+
+<h2>🛡️ AI-Powered Defense Solutions</h2>
 
 <p>
-Real-time sales analytics, operational KPIs and automation ROI.
+Leanova is developing AI-powered solutions
+for defense and security operations.
 </p>
 
-</div>
+<div class="defense-features">
 
-
-<div class="card project">
-
-<span>DOCUMENT AI</span>
-
-<h3>Document Intelligence</h3>
-
-<p>
-AI-powered OCR, document extraction, classification and RAG.
-</p>
+<div>🟠 Intelligence Data Analysis</div>
+<div>🔵 Surveillance Data Processing</div>
+<div>🟠 Mission Planning Support</div>
+<div>🔵 Secure AI Infrastructure</div>
 
 </div>
 
-
-<div class="card project">
-
-<span>HEALTHCARE</span>
-
-<h3>Patient Automation</h3>
-
-<p>
-Appointment scheduling, enquiries, reminders and follow-ups.
-</p>
-
-</div>
-
-
-<div class="card project">
-
-<span>RETAIL</span>
-
-<h3>Retail Workflow Automation</h3>
-
-<p>
-Customer support, order workflows, reporting and analytics.
-</p>
-
-</div>
-
-
-<div class="card project">
-
-<span>MANUFACTURING</span>
-
-<h3>Operations Automation</h3>
-
-<p>
-Production reporting, maintenance workflows and business analytics.
-</p>
-
+<div class="progress">
+IN PROGRESS
 </div>
 
 </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="section-title">
-
-<h2>Why Leanova?</h2>
-
-<p>Technology focused on measurable business outcomes.</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>⚡ Faster</h3>
-<p>
-Our ASF approach helps businesses move from process discovery
-to automation faster.
-</p>
-</div>
-
-<div class="card">
-<h3>🎯 Business Focused</h3>
-<p>
-We focus on solving actual operational problems rather than
-implementing technology for its own sake.
-</p>
-</div>
-
-<div class="card">
-<h3>📈 ROI Driven</h3>
-<p>
-We measure time savings, productivity, process improvement and
-business impact.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>Ready to Automate Your Business?</h2>
-
-<p>
-Show us one repetitive process in your business.
-We'll identify the automation opportunity and demonstrate
-how it can be improved.
-</p>
-
-<div class="buttons" style="justify-content:center;">
-
-<a class="btn primary" href="#contact">
-Get Free Automation Audit →
-</a>
 
 </div>
 
@@ -893,64 +791,46 @@ Get Free Automation Audit →
 
 <section id="contact">
 
-<div class="contact">
-
-<div class="contact-info">
+<div class="section-title">
 
 <h2>Start Your Automation Journey</h2>
 
 <p>
-Tell us about your business process, operational challenge
-or automation requirement.
-</p>
-
-<br>
-
-<p><strong>Industries:</strong> Real Estate · Healthcare · Retail · Manufacturing · Education · Finance</p>
-
-<br>
-
-<p><strong>Service:</strong> AI Agents · Voice Automation · Workflow Automation · AI Dashboards · ERP/CRM Integration</p>
-
-<br>
-
-<p>
-We will review your requirement and get back to you.
+Tell us what you want to automate.
 </p>
 
 </div>
 
+<div class="contact">
 
-<form onsubmit="sendRequest(event)">
+<div class="form-grid">
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" placeholder="Your Name">
 
-<input type="text" placeholder="Company Name" required>
+<input type="text" placeholder="Company Name">
 
-<input type="email" placeholder="Work Email" required>
+<input type="email" placeholder="Work Email">
 
 <input type="tel" placeholder="Phone Number">
 
-<select required>
+</div>
 
-<option value="">Select Project Type</option>
-
+<select style="margin-top:15px;">
+<option>Select Project Type</option>
+<option>Real Estate Automation</option>
 <option>AI Voice Agent</option>
 <option>Business Automation</option>
-<option>Document AI</option>
 <option>AI Dashboard</option>
-<option>ERP / CRM Integration</option>
+<option>Document Intelligence</option>
+<option>Defense AI</option>
 <option>Custom AI Solution</option>
-
 </select>
 
 <textarea placeholder="How can we help you?"></textarea>
 
-<button type="submit">
+<button class="submit">
 Send Request →
 </button>
-
-</form>
 
 </div>
 
@@ -962,39 +842,19 @@ Send Request →
 <footer>
 
 <div class="logo">
-
 LEANOVA
-
 <span>OPEX SOLUTIONS</span>
-
 </div>
 
 <p>
 AI-Powered Automation Solutions for Smarter Businesses.
 </p>
 
-<br>
-
-<p>
+<p style="margin-top:10px;">
 © 2026 Leanova OPEX Solutions. All rights reserved.
 </p>
 
 </footer>
-
-
-<script>
-
-function sendRequest(event) {
-
-event.preventDefault();
-
-alert(
-"Thank you for contacting Leanova OPEX Solutions. We will get back to you soon."
-);
-
-}
-
-</script>
 
 </body>
 </html>
